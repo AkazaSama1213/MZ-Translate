@@ -14,10 +14,13 @@ A simple and lightweight Chrome extension that lets you **select text on any web
 
 ## 📸 Screenshots
 
-### Arabic
+### MZ translator
+![Popup Screenshot](./screenshots/ext.png)
+
+### English - Arabic 
 ![Popup Screenshot](./screenshots/ar_screenshot.png)
 
-### Frensh
+### English - Frensh
 ![Tooltip Screenshot](./screenshots/fr_screenshot.png)
 
 ---
