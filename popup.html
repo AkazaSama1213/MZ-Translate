@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quick Translate</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 20px;
+        width: 250px;
+        background: #f9fafc;
+        color: #333;
+      }
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 18px;
+        text-align: center;
+        color: #222;
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      /* Custom select */
+      .custom-select {
+        position: relative;
+        font-family: inherit;
+        width: 100%;
+      }
+
+      .select-selected {
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease-in-out;
+      }
+
+      .select-selected:hover {
+        border-color: #4CAF50;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .select-selected img {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+      }
+
+      .select-items {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        width: 100%;
+        z-index: 99;
+        display: none;
+        margin-top: 4px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .select-items div {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .select-items div:hover {
+        background-color: #f1f1f1;
+      }
+
+      .select-items img {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+      }
+
+      .open .select-items {
+        display: block;
+      }
+
+      /* Save button */
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        transition: background 0.2s, transform 0.1s;
+      }
+
+      button:hover {
+        background: linear-gradient(135deg, #45a049, #3d8f41);
+        transform: translateY(-1px);
+      }
+
+      button:active {
+        transform: translateY(1px);
+      }
+    </style>
+  </head>
+  <body id="popup-body">
+    <h3>Translation Settings</h3>
+    <label>Target language:</label>
+    <div class="custom-select" id="lang-select">
+      <div class="select-selected">
+        <img src="flags/fr.png" alt="French"> French
+      </div>
+      <div class="select-items">
+        <div data-value="fr"><img src="flags/fr.png" alt="French"> French</div>
+        <div data-value="ar"><img src="flags/ar.png" alt="Arabic"> Arabic</div>
+        <div data-value="en"><img src="flags/en.png" alt="English"> English</div>
+        <div data-value="es"><img src="flags/es.png" alt="Spanish"> Spanish</div>
+        <div data-value="de"><img src="flags/de.png" alt="German"> German</div>
+        <div data-value="zh"><img src="flags/zh.png" alt="Chinese"> Chinese</div>
+        <div data-value="ru"><img src="flags/ru.png" alt="Russian"> Russian</div>
+      </div>
+    </div>
+    <button id="save">Save</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "MZ Translate",
+  "version": "2.0",
+  "description": "Translate selected text instantly",
+  "permissions": ["storage", "scripting", "contextMenus", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
